@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetto B.U.S. - Basta Un Segnale</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="container">
+            <img src="immagini/logo.png" alt="Logo B.U.S." class="logo-head">
+            <p>Soluzione IoT per il monitoraggio degli scuolabus</p>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <img src="immagini/logo-scroll.png" alt="Logo B.U.S." class="navbar-logo">
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#presentazione">Presentazione</a></li>
+                    <li><a href="#architettura">Architettura</a></li>
+                    <li><a href="#funzionalita">Funzionalità</a></li>
+                    <li><a href="#utenti">Utenti</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="presentazione" class="hero">
+            <div class="container section-content-card">
+                <h2>Presentazione del Progetto B.U.S.</h2>
+                <p>B.U.S. nasce per rendere il trasporto scolastico più sicuro, trasparente e connesso, grazie all’integrazione di tecnologie intelligenti. L’obiettivo è monitorare in modo automatico e preciso la presenza dei bambini a bordo dello scuolabus, superando i limiti degli attuali sistemi manuali basati su elenchi cartacei o memoria individuale.</p>
+                <p>La soluzione si basa su dispositivi Bluetooth Low Energy (BLE), che rilevano automaticamente la presenza dei bambini senza bisogno di intervento da parte loro o degli autisti. I dati vengono elaborati da un sistema intelligente a bordo e inviati al Cloud, permettendo ai genitori di ricevere aggiornamenti in tempo reale sulla salita e discesa dei figli dal mezzo.</p>
+                <p>A supporto, è stata sviluppata una Web Application con funzionalità differenziate:</p>
+                <ul>
+                    <li>Amministratori: gestione centralizzata di utenti, dispositivi e organizzazione del servizio.</li>
+                    <li>Autisti: possibilità di aggiornare manualmente lo stato dei bambini in casi particolari.</li>
+                    <li>Genitori: monitoraggio costante, cronologia degli spostamenti e assistenza tramite chatbot.</li>
+                </ul>
+                <p>In sintesi, B.U.S. propone una piattaforma automatica ed efficiente, pensata per migliorare la sicurezza dei minori, la tranquillità delle famiglie e l'efficienza operativa del servizio di trasporto scolastico.</p>
+            </div>
+        </section>
+
+
+        <section id="architettura" class="alt-bg">
+            <div class="container section-content-card">
+                <h2>Architettura del Sistema</h2>
+                <p>Diagramma completo dell'architettura del sistema B.U.S.</p>
+                <img src="immagini/architettura.jpeg" alt="Diagramma Architettura del Sistema B.U.S." class="architecture-img">
+                <p>Il sistema è progettato con un approccio modulare per garantire robustezza, scalabilità e manutenibilità, suddividendo le responsabilità tra Edge Device, Back-end Cloud e Front-end Web.</p>
+            </div>
+        </section>
+
+        <section id="funzionalita">
+            <div class="container section-content-card">
+                <h2>Funzionalità Chiave e Strumenti Utilizzati</h2>
+                <p>Alla base del sistema c’è un meccanismo di rilevamento automatico che utilizza:</p>
+                <ul>
+                    <li>Beacon Bluetooth Low Energy (BLE) indossati dai bambini.</li>
+                    <li>Un modulo Raspberry Pi installato sullo scuolabus, che agisce da scanner.</li>
+                </ul>
+                <p>Quando un bambino sale o scende dal mezzo, il Raspberry Pi rileva l’ingresso o l’uscita del beacon dall’area di copertura e aggiorna in tempo reale lo stato di presenza nel database Cloud Firestore.</p>
+                <p>Questo processo garantisce:</p>
+                <ul>
+                    <li>Riduzione dell’intervento umano.</li>
+                    <li>Eliminazione degli errori manuali.</li>
+                    <li>Aggiornamenti immediati e precisi dello stato dei bambini.</li>
+                </ul>
+                <p>Le principali tecnologie alla base dello sviluppo includono:</p>
+                <div class="tech-list">
+                    <span>
+                        <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-2024-2025-frontend-PrimaBisanti">Web App Angular (Front-end)</a>
+                    </span>
+                    <span>
+                        <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-2024-2025-backend-cloudfunctions-PrimaBisanti">Firebase Cloud Functions (Back-end)</a>
+                    </span>
+                    <span>
+                        <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-2024-2025-edge-device-raspberrypi-PrimaBisanti">Script Python per Raspberry Pi (Edge Device)</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="utenti" class="alt-bg">
+            <div class="container section-content-card">
+                <h2>Esperienze Utente Personalizzate</h2>
+                <p>Il sistema B.U.S. offre interfacce e funzionalità distinte per soddisfare le esigenze specifiche di ogni tipologia di utente coinvolto nel trasporto scolastico.</p>
+
+                <div class="user-role-card">
+                    <h3>Genitori</h3>
+                    <p>I genitori accedono a una dashboard personalizzata tramite login sicuro (e-mail o Google), dove possono:</p>
+                    <ul>
+                        <li>Associare i figli al proprio profilo.</li>
+                        <li>Visualizzare in tempo reale lo stato (salita/discesa) dei bambini.</li>
+                        <li>Consultare una cronologia dettagliata degli spostamenti.</li>
+                        <li>Interagire con un chatbot AI per ricevere risposte rapide su posizione e orari.</li>
+                        <li>Ricevere notifiche push immediate in caso di variazione dello stato.</li>
+                    </ul>
+                </div>
+
+                <div class="user-role-card">
+                    <h3>Autisti / Accompagnatori</h3>
+                    <p>Dispongono di una dashboard dedicata per:</p>
+                    <ul>
+                        <li>Visualizzare l’elenco dei bambini.</li>
+                        <li>Aggiornare manualmente la presenza, in caso di dimenticanza o malfunzionamento del beacon da parte del bambino.</li>
+                    </ul>
+                </div>
+
+                <div class="user-role-card">
+                    <h3>Amministratori</h3>
+                    <p>Gestiscono l’intero sistema tramite una sezione avanzata della Web App:</p>
+                    <ul>
+                        <li>Controllo completo di genitori, autisti, bambini, fermate e dispositivi BLE.</li>
+                        <li>Possibilità di aggiungere, modificare o rimuovere elementi per mantenere il sistema aggiornato e coerente.</li>
+                    </ul>
+                </div>
+
+                <h3>Vedi le interfacce in azione!</h3>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="immagini/register.jpeg" alt="Registrazione" class="carousel-image">
+                        <div class="carousel-caption">I genitori possono facilmente registrarsi al sistema creando un nuovo account o utilizzando il proprio account Google per un accesso rapido.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="immagini/login.jpeg" alt="Login" class="carousel-image">
+                        <div class="carousel-caption">L'accesso è semplice e sicuro, consentendo agli utenti di entrare con le proprie credenziali o tramite l'autenticazione Google.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="immagini/dash_genitore.jpeg" alt="Dashboard Genitore" class="carousel-image">
+                        <div class="carousel-caption">I genitori usano l'app per monitorare in tempo reale la posizione dei figli sul bus e per ricevere notifiche sugli eventi.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="immagini/dettagli_bimbo.jpeg" alt="Bimbo" class="carousel-image">
+                        <div class="carousel-caption">Ogni bambino ha una pagina dedicata che mostra i suoi dati anagrafici e la cronologia dei suoi spostamenti sul bus.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="immagini/chatbot.png" alt="chatbot" class="carousel-image">
+                        <div class="carousel-caption">Un assistente virtuale intelligente è disponibile per rispondere a domande frequenti e fornire supporto agli utenti.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="immagini/dash_autista.jpeg" alt="Dashboard Autista" class="carousel-image">
+                        <div class="carousel-caption"> Gli autisti gestiscono manualmente e in tempo reale lo stato di presenza dei bambini a bordo in caso di dimenticanza del beacon BLE.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="immagini/dash_amministratore.jpeg" alt="Dashboard Amministratore" class="carousel-image">
+                        <div class="carousel-caption"> Gli amministratori supervisionano l'intero sistema, gestiscono utenti (genitori, autisti), bambini, scuolabus, beacon BLE e fermate.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="immagini/aggiungi_autista.jpeg" alt="Aggiungi Autista" class="carousel-image">
+                        <div class="carousel-caption">Gli amministratori hanno il pieno controllo del sistema, potendo aggiungere e gestire nuovi autisti, fermate e beacon per ottimizzare il servizio. </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="immagini/gest_autisti.png" alt="Gestisci Autista" class="carousel-image">
+                        <div class="carousel-caption"> Gli amministratori hanno la piena visibilità e controllo su autisti, fermate e beacon, con la possibilità di eliminare voci esistenti.</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="immagini/gest_bimbi.png" alt="Gestisci Bimbi" class="carousel-image">
+                        <div class="carousel-caption"> Gli amministratori possono visualizzare un elenco completo di tutti i bambini registrati e accedere a ogni loro dettaglio anagrafico e di spostamento.</div>
+                    </div>
+                    <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+
+                    <div class="carousel-dots">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="video">
+            <div class="container section-content-card">
+                <h2>Dimostrazione Video</h2>
+                <p>Guarda il nostro video per una dimostrazione pratica del sistema B.U.S. in azione.</p>
+                <div class="video-container">
+                    <video controls preload="metadata" playsinline muted>
+                        <source src="video/bus-video-demo.mp4" type="video/mp4">
+                        Il tuo browser non supporta il tag video.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="alt-bg">
+            <div class="container section-content-card"> <h2>Il Nostro Team</h2>
+                <p>Siamo due studenti impegnati nello sviluppo di soluzioni innovative, con l'obiettivo di migliorare la vita quotidiana attraverso la tecnologia.</p>
+
+                <div class="team-members-container">
+                    <div class="team-card">
+                        <h3>Alessia Prima</h3>
+                        <div class="contact-info">
+                            <a href="mailto:alessia.prima@studenti.unisalento.it">alessia.prima@studenti.unisalento.it</a>
+                            <a href="mailto:primaalessia@gmail.com">primaalessia@gmail.com</a>
+                            <a href="tel: +393890050940">+39 389 005 0940</a>                            
+                            </div>
+                    </div>
+
+                    <div class="team-card">
+                        <h3>Francesco Bisanti</h3>
+                        <div class="contact-info">
+                            <a href="mailto:francesco.bisanti1@studenti.unisalento.it">francesco.bisanti1@studenti.unisalento.it</a>
+                            <a href="mailto:francescobisanti03@gmail.com">francescobisanti03@gmail.com</a>
+                            <a href="tel: +393476573444">+39 347 657 3444</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024-2025 Progetto B.U.S. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+</body>
+</html>
