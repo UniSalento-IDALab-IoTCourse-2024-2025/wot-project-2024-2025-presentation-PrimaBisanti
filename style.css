@@ -894,14 +894,6 @@ footer {
         overflow-wrap: break-word;
     }
 
-    .video-container{
-        max-width: 720px;
-    }
-    .video-container iframe {
-        transform: scale(0.85);
-        transform-origin: top left;
-    }
-
     footer {
         padding: 15px 10px;
     }
